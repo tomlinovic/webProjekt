@@ -1,3 +1,8 @@
+if (!window.AppData) {
+    console.error("AppData not loaded!");
+}
+
+
 const friendComments = window.AppData.friendComments;
 const allComments = window.AppData.allComments;
 
