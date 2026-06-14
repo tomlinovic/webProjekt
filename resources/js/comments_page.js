@@ -133,8 +133,11 @@ const csrf = window.AppData.csrf;
                     name: userName
                 },
                 text: text,
-                created_at: data.created_at
+                created_at: data.created_at,
+                anime_id: animeId,
+                episode: episode
             };
+
 
             allComments.push(newComment);
 
