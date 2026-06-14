@@ -22,4 +22,4 @@ RUN mkdir -p storage/framework/sessions storage/framework/views storage/framewor
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "composer dump-autoload && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link && php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=8080"]
+CMD ["sh", "-c", "php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080"]
