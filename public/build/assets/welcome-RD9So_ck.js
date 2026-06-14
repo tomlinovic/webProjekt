@@ -1,0 +1,8 @@
+document.addEventListener("DOMContentLoaded",()=>{function d(e){let n=0,o=0,t=0;for(let r=0;r<e.length;r++)n=(n+e.charCodeAt(r)*17)%256,o=(o+e.charCodeAt(r)*31)%256,t=(t+e.charCodeAt(r)*47)%256;const a=[n,o,t].map(r=>r.toString(16).padStart(2,"0")).join(""),c=`#${a}`,l=parseInt(a.substring(0,2),16),m=parseInt(a.substring(2,4),16),h=parseInt(a.substring(4,6),16),g=.299*l+.587*m+.114*h;return{bg:c,textColor:g>150?"#000":"#fff"}}function u(e){const n=document.getElementById("random-anime"),o=document.getElementById("search-status");if(e.length===0){n.innerHTML="",o.textContent="Nije pronađen nijedan anime.";return}o.textContent="",n.innerHTML=e.map(t=>{const{bg:a,textColor:c}=d(t.title);return`
+                <a href="/anime/${t.id}">
+                    <div class="anime-card" style="background:${a}; color:${c}">
+                        <img src="${t.cover_image}" alt="${t.title}">
+                        <h3>${t.title}</h3>
+                    </div>
+                </a>
+            `}).join("")}function s(e=""){const n=document.getElementById("search-status"),o=e?`/search-anime?q=${encodeURIComponent(e)}`:"/search-anime";n.textContent="Učitavanje...",fetch(o).then(t=>{if(!t.ok)throw new Error("Greška pri dohvatu podataka.");return t.json()}).then(u).catch(t=>{n.textContent="Greška: "+t.message,console.error(t)})}let i;document.getElementById("search-input").addEventListener("input",e=>{const n=e.target.value;if(/[<>{}]/.test(n)){document.getElementById("search-status").textContent="Nedozvoljeni znakovi u pretrazi.";return}clearTimeout(i),i=setTimeout(()=>s(n.trim()),300)}),s()});

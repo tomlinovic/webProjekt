@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #722F37;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+}
+
+h1, h2, .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  gap: 10px;  
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto auto auto;
+}
+
+.header {
+  grid-area: header;
+  background-color: #202940;
+  text-align: center;
+  padding: 8px;
+  color: #ffffff;
+}
+
+.header > h1 {
+  font-size: 40px;
+}
+
+.menu {
+  grid-area: menu;
+  }
+  
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #478B8D;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+  
+.content {
+  grid-area: main;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.content > p {
+  margin-bottom: 7px;
+}
+
+.facts {
+  grid-area: facts;
+  border: 1px solid #0099cc;
+  background-color: beige;
+  padding: 20px;
+  line-height: 1.6;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+
+  overflow: hidden;
+}
+
+.facts p {
+  margin: 0;
+  max-width: 100%;
+  font-size: 1.5em;
+  font-family: 'Bebas Neue', sans-serif;
+  color: black;
+}
+
+
+.facts > h2 {
+  font-size: 20px;
+}
+
+.facts li {
+  margin-bottom: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  .grid-container {
+    grid-template-columns: 220px 1fr 320px;
+    grid-template-areas:
+      "header header header"
+      "menu main facts"
+      "footer footer footer";
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  .content {
+    grid-area: main;
+    max-width: 100%;
+  }
+
+  .facts {
+    grid-area: facts;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth-container button:not(.toggle-password) {
+    width: 100%;
+    padding: 12px;
+    background: #0099cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.auth-container button:not(.toggle-password):hover {
+    background: #0077aa;
+}

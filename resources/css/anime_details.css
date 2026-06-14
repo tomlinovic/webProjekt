@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.friends-title {
+    margin-bottom: 12px;
+    color: #202940;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.friend-line {
+    background: rgba(255,255,255,0.6);
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #222;
+    border-left: 4px solid #0099cc;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+#friend-progress-box {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+#friend-progress-box h3 {
+    margin-bottom: 10px;
+    color: #202940;
+}
+
+#friend-progress-box p {
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.episode-box.watched {
+    background-color: #4caf50;
+    color: white;
+}
+
+.episode-box.unwatched {
+    background-color: #000;
+    color: #aaa;
+}
+
+.status-select {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.status-select:focus {
+    border-color: #0099cc;
+    outline: none;
+}
+
+.user-status-section {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.user-status-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    background: #999;
+    color: white;
+    margin-top: 10px;
+}
+
+
+.status-watching { background: #17a2b8; }
+.status-watched { background: #28a745; }
+.status-dropped { background: #dc3545; }
+.status-not_watched { background: #666; }
+
+.episodes-section {
+    margin-top: 30px;
+}
+
+.episodes-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 12px;
+}
+
+.episode-box {
+    width: 90px;
+    height: 90px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.episode-box.can-interact {
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.episode-box.can-interact:hover {
+    transform: translateY(-3px);
+}
+
+.episode-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.left-half,
+.right-half {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.2s ease;
+}
+
+.episode-box.unwatched {
+    background: #000;
+    color: #fff;
+}
+
+.episode-box.watched {
+    background: #4caf50;
+    color: #fff;
+}
+
+.left-half {
+    left: 0;
+    background: #4caf50;
+}
+
+.right-half {
+    right: 0;
+    background: rgb(0, 0, 0);
+}
+
+
+
+.episode-box.can-interact:hover .left-half {
+    opacity: 1;
+    background-image: url('/images/check.png');
+}
+
+.episode-box.can-interact:hover .right-half {
+    opacity: 1;
+    background-image: url('/images/comment1.png');
+}
+.ep-number {
+    position: relative;
+    z-index: 5;
+}
+
+
+.anime-page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.anime-details {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease-out;
+}
+
+.anime-cover img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+#anime-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.status{
+    text-align: center
+}
+
+.status-finished { background: #28a745; color: white; }
+.status-ongoing { background: #ffc107; color: #333; }
+.status-upcoming { background: #17a2b8; color: white; }
+.status-not_finished { background: #dc3545; color: white; }
+
+.anime-stats {
+    display: flex;
+    gap: 25px;
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.description {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .anime-details {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .anime-cover {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

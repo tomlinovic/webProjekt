@@ -1,0 +1,116 @@
+{
+  "resources/css/anime_details.css": {
+    "file": "assets/anime_details-DZ0hg2sE.css",
+    "src": "resources/css/anime_details.css",
+    "isEntry": true,
+    "name": "anime_details",
+    "names": [
+      "anime_details.css"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-9K2yZSRt.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/comments_page.css": {
+    "file": "assets/comments_page-DzDoi2yK.css",
+    "src": "resources/css/comments_page.css",
+    "isEntry": true,
+    "name": "comments_page",
+    "names": [
+      "comments_page.css"
+    ]
+  },
+  "resources/css/friends.css": {
+    "file": "assets/friends-BZEbb9XO.css",
+    "src": "resources/css/friends.css",
+    "isEntry": true,
+    "name": "friends",
+    "names": [
+      "friends.css"
+    ]
+  },
+  "resources/css/literatura.css": {
+    "file": "assets/literatura-B5GnO2Ii.css",
+    "src": "resources/css/literatura.css",
+    "isEntry": true,
+    "name": "literatura",
+    "names": [
+      "literatura.css"
+    ]
+  },
+  "resources/css/my_anime.css": {
+    "file": "assets/my_anime-DyM_Qc6W.css",
+    "src": "resources/css/my_anime.css",
+    "isEntry": true,
+    "name": "my_anime",
+    "names": [
+      "my_anime.css"
+    ]
+  },
+  "resources/css/register.css": {
+    "file": "assets/register-CJJxUint.css",
+    "src": "resources/css/register.css",
+    "isEntry": true,
+    "name": "register",
+    "names": [
+      "register.css"
+    ]
+  },
+  "resources/css/welcome.css": {
+    "file": "assets/welcome-Dn1mRLpH.css",
+    "src": "resources/css/welcome.css",
+    "isEntry": true,
+    "name": "welcome",
+    "names": [
+      "welcome.css"
+    ]
+  },
+  "resources/js/anime_details.js": {
+    "file": "assets/anime_details-h0BQGZMN.js",
+    "name": "anime_details",
+    "src": "resources/js/anime_details.js",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-UyRVujZY.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/comments_page.js": {
+    "file": "assets/comments_page-CuBTgQgh.js",
+    "name": "comments_page",
+    "src": "resources/js/comments_page.js",
+    "isEntry": true
+  },
+  "resources/js/friends.js": {
+    "file": "assets/friends-CUY09B_U.js",
+    "name": "friends",
+    "src": "resources/js/friends.js",
+    "isEntry": true
+  },
+  "resources/js/my_anime.js": {
+    "file": "assets/my_anime-Brx9EjbP.js",
+    "name": "my_anime",
+    "src": "resources/js/my_anime.js",
+    "isEntry": true
+  },
+  "resources/js/register.js": {
+    "file": "assets/register-BVenvXGF.js",
+    "name": "register",
+    "src": "resources/js/register.js",
+    "isEntry": true
+  },
+  "resources/js/welcome.js": {
+    "file": "assets/welcome-RD9So_ck.js",
+    "name": "welcome",
+    "src": "resources/js/welcome.js",
+    "isEntry": true
+  }
+}
