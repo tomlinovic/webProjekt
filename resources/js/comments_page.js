@@ -1,6 +1,4 @@
-if (!window.AppData) {
-    console.error("AppData not loaded!");
-}
+console.log("allComments:", JSON.stringify(allComments));
 
 const friendComments = window.AppData.friendComments;
 const allComments = window.AppData.allComments;
