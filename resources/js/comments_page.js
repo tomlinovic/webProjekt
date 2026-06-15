@@ -1,7 +1,8 @@
-console.log("allComments:", JSON.stringify(allComments));
-
 const friendComments = window.AppData.friendComments;
 const allComments = window.AppData.allComments;
+
+console.log("allComments:", JSON.stringify(allComments));
+
 const userId = window.AppData.userId;
 const userName = window.AppData.userName;
 const animeId = window.AppData.animeId;
