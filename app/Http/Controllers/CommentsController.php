@@ -55,15 +55,19 @@ class CommentsController extends Controller
         $request->validate([
             'text' => 'required|string|max:128'
         ]);
-
-        Comments::create([
+    
+        $comment = Comments::create([
             'user_id' => Auth::id(),
             'anime_id' => $anime_id,
             'animeEpisode' => $episode_number,
             'text' => $request->text
         ]);
-
-        return response()->json(['success' => true]);
+    
+        return response()->json([
+            'success' => true,
+            'id' => $comment->id,
+            'created_at' => $comment->created_at
+        ]);
     }
 
     public function update(Request $request, $id)
