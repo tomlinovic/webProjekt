@@ -18,7 +18,12 @@ function normalizeDate(dateString) {
     }
     const parts = dateString.match(/(\d+)\.\s*(\d+)\.\s*(\d+)\.\s*(\d+):(\d+):(\d+)/);
     if (parts) {
-        const [_, day, month, year, hour, minute, second] = parts;
+        const day = parts[1];
+        const month = parts[2];
+        const year = parts[3];
+        const hour = parts[4];
+        const minute = parts[5];
+        const second = parts[6];
         return `${year}-${month}-${day}T${hour}:${minute}:${second}`;
     }
     return null;
