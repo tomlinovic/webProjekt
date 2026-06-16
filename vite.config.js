@@ -21,6 +21,7 @@ export default defineConfig({
                 'resources/css/welcome.css',
                 'resources/js/welcome.js',
                 'resources/css/literatura.css',
+                'resources/js/login.js'
             ],
             refresh: true,
         }),
